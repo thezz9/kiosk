@@ -1,4 +1,4 @@
-package lv45;
+package required.lv45;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package lv1;
+package required.lv1;
 
 import java.util.Scanner;
 

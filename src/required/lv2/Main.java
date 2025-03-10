@@ -1,19 +1,22 @@
-package lv3;
+package required.lv2;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Kiosk {
+public class Main {
+    public static void main(String[] args) {
 
-    private List<MenuItem> menuItems = new ArrayList<>();
+        // List 선언 및 초기화
+        List<MenuItem> menuItems = new ArrayList<>();
 
-    public Kiosk(List<MenuItem> menuItems) {
-        this.menuItems = menuItems;
-    }
+        // add 함수를 통해 new MenuItem(이름, 가격, 설명) List에 삽입
+        menuItems.add(new MenuItem("ShackBurger  ",6.9,"토마토, 양상추, 쉑소스가 토핑된 치즈버거"));
+        menuItems.add(new MenuItem("SmokeShack   ",8.9,"베이컨, 체리 페퍼에 쉑소스가 토핑된 치즈버거"));
+        menuItems.add(new MenuItem("Cheeseburger ",6.9,"포테이토 번과 비프패티, 치즈가 토핑된 치즈버거"));
+        menuItems.add(new MenuItem("Hamburger    ",5.4,"비프패티를 기반으로 야채가 들어간 기본버거"));
 
-    public void start() {
-
+        // Scanner 선언
         Scanner sc = new Scanner(System.in);
 
         do {
@@ -26,19 +29,9 @@ public class Kiosk {
             }
             System.out.println("0. 종료      | 종료");
 
-            // 사용자 입력 받기
+            // 숫자 입력 받기
             System.out.print("메뉴 번호를 입력하세요: ");
-            int choice;
-
-            // 숫자가 아닌 값 입력 시 예외 처리
-            if (!sc.hasNextInt()) {
-                System.out.println("올바른 숫자를 입력하세요.");
-                sc.next();
-                continue;
-            }
-
-            choice = sc.nextInt();
-
+            int choice = sc.nextInt();
             // 입력된 숫자에 따른 처리
             if (choice == 0) {
                 // 프로그램을 종료
@@ -54,7 +47,7 @@ public class Kiosk {
             }
         } while (true);
 
-        sc.close();
+
 
     }
 }
