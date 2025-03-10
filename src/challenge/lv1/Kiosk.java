@@ -7,6 +7,8 @@ import java.util.Scanner;
 public class Kiosk {
 
     private final List<Menu> menus;
+    private final Cart cart = new Cart();
+    private final Scanner sc = new Scanner(System.in);
 
     public Kiosk() {
         this.menus = new ArrayList<>();
@@ -15,9 +17,6 @@ public class Kiosk {
     public void addMenu(Menu menu) {
         menus.add(menu);
     }
-
-    Cart cart = new Cart();
-    Scanner sc = new Scanner(System.in);
 
     /** 키오스크 실행 구간 */
     public void start() {
