@@ -57,7 +57,7 @@ public class Kiosk {
                         if (confirm == 1) { // 주문
                             System.out.println("1. 국가유공자 : 10%\n2. 군인 : 5%\n3. 학생 : 3%\n4. 일반 : 0%");
                             System.out.print("해당하는 번호를 입력하세요: ");
-                            totalPrice = cart.getDiscountPrice(input.getValidInputInRange(4), totalPrice);
+                            totalPrice = cart.getDiscountPrice(input.getValidInputInRange(Discount.values().length), totalPrice);
                             System.out.println("주문이 완료되었습니다. 금액은 W " + totalPrice + "입니다.");
                             cart.clearCart();
                             break;

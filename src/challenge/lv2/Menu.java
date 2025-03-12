@@ -1,10 +1,7 @@
 package challenge.lv2;
 
-import org.w3c.dom.ls.LSOutput;
-
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class Menu {
@@ -42,4 +39,5 @@ public class Menu {
                 .forEach(System.out::println);
         System.out.println("0. 뒤로가기");
     }
+
 }

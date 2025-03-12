@@ -48,20 +48,8 @@ public class Cart {
      * 유형별 할인율에 따른 총 금액 계산 (반올림 적용)
      */
     public double getDiscountPrice(int discountChoice, double totalPrice) {
-        switch (discountChoice) {
-            case 1:
-                totalPrice = totalPrice - (totalPrice * Discount.veteran.getDiscount());
-                break;
-            case 2:
-                totalPrice = totalPrice - (totalPrice * Discount.soldier.getDiscount());
-                break;
-            case 3:
-                totalPrice = totalPrice - (totalPrice * Discount.student.getDiscount());
-                break;
-            case 4:
-                break;
-        }
-        totalPrice = Math.round(totalPrice * 100.0) / 100.0;
+        double discount = Discount.getDiscountForChoice(discountChoice);
+        totalPrice = Math.round((totalPrice - (totalPrice * discount)) * 100.0) / 100.0;
         return totalPrice;
     }
 
