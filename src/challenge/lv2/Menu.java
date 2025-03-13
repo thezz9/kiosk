@@ -33,9 +33,7 @@ public class Menu {
     public void displayItems() {
         System.out.println("[ " + category + " MENU ]");
         IntStream.range(0, menuItems.size())
-                .mapToObj(i -> (i + 1) + ". " + menuItems.get(i).getName()
-                        + " | W " + menuItems.get(i).getPrice()
-                        + " | " + menuItems.get(i).getDescription())
+                .mapToObj(i -> (i + 1) + ". " + menuItems.get(i))
                 .forEach(System.out::println);
         System.out.println("0. 뒤로가기");
     }

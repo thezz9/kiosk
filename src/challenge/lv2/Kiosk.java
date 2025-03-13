@@ -99,8 +99,7 @@ public class Kiosk {
             }
 
             MenuItem selectedItem = menu.getMenuItems().get(itemChoice - 1);
-            System.out.println("선택한 메뉴: " + selectedItem.getName() + " | W " +
-                    selectedItem.getPrice() + " | " + selectedItem.getDescription());
+            System.out.println("선택한 메뉴: " + selectedItem);
             System.out.println("위 메뉴를 장바구니에 추가하시겠습니까?");
             System.out.println("1. 확인      2. 취소");
             System.out.print("원하는 번호를 입력하세요: ");

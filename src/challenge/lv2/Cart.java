@@ -32,8 +32,8 @@ public class Cart {
         double totalPrice = IntStream.range(0, getCartItems().size())
                 .peek(i -> {
                     MenuItem item = getCartItems().get(i);
-                    System.out.println((i + 1) + ". " + item.getName() + " | W " +
-                            item.getPrice() + " | " + item.getDescription());
+                    System.out.printf("%d. %-12s | W %-4.1f| %s\n", i + 1,
+                                    item.getName(), item.getPrice(), item.getDescription());
                 })
                 .mapToDouble(i -> getCartItems().get(i).getPrice())
                 .sum();
